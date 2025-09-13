@@ -1,0 +1,196 @@
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* define explicit height */
+  padding: 2rem;
+  background: #36645f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  background-color: #36645f;
+}
+
+.header .navbar ul li {
+  margin: 0 1rem;
+  background-color: #36645f;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+/* ✅ Navbar links with smooth fade underline */
+.navbar ul li a {
+  font-size: 18px;
+  background-color: #36645f;
+  color: white;
+  margin-left: 1rem;
+  transition: .3s;
+  border-bottom: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 0;
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  opacity: 1;
+}
+
+.header .navbar ul li a.active {
+  color: white;
+  background-color: transparent;
+  border-bottom: none;
+}
+
+a {
+  display: inline-block;
+  font-size: var(--p-font);
+  font-weight: 400;
+  color: var(--second-text-color);
+  text-transform: uppercase;
+  margin: 0 35px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #E2DED3;
+  color: #492F25;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 150px 20px 40px 20px; /* top | right | bottom | left */
+}
+
+.heading h3 {
+  font-size: 3em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #492F25;
+}
+
+.heading span {
+  font-weight: 300;
+}
+
+/* ✅ Enlarged Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px; /* a bit wider spacing */
+  width: 95%; /* slightly wider, but not full width */
+  max-width: 1400px; /* increased from 1200px */
+  margin: 50px auto; /* centers grid, adds balanced spacing */
+}
+
+/* ✅ Stronger tinted background per column */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: rgba(54, 100, 95, 0.12); /* increased opacity */
+  transition: background-color 0.3s ease;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* ✅ Subtle title hover effect */
+.title:hover {
+  color: #7A5C50;
+  transform: scale(1.05);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(73, 47, 37, 0.3);
+  transition: box-shadow 0.3s ease;
+  min-height: 200px; /* ensure container has height */
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+/* ✅ Hover zoom */
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.05);
+}
+
+/* ✅ Stronger hover glow */
+.gallery-item:hover {
+  box-shadow: 0 0 20px rgba(54, 100, 95, 0.6),
+              0 8px 20px rgba(73, 47, 37, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

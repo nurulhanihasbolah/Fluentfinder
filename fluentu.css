@@ -1,0 +1,174 @@
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  background-color: transparent;
+  font-family: "Poppins", serif;
+}
+
+:root {
+  --bg-color: #36645f;
+  --text-color: white;
+  --main-color: #FF005A;
+  --other-color: #9A8B85;
+  --second-color: #69493E;
+  --second-text-color: #F97EA2;
+}
+
+section {
+  padding-top: 100px; 
+  margin-top: -100px;
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: #36645f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  background-color: #36645f;
+}
+
+.header .navbar ul li {
+  margin: 0 1rem;
+  background-color: #36645f;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar ul li a {
+  font-size: 18px;
+  background-color: #36645f;
+  color: var(--text-color);
+  margin-left: 1rem;
+  transition: .3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+a {
+  display: inline-block;
+  font-size: var(--p-font);
+  font-weight: 400;
+  color: var(--second-text-color);
+  text-transform: uppercase;
+  margin: 0 35px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+
+/* ABOUT BOX */
+.skills-container {
+  padding: 0; /* Reset padding */
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills-container .skills-box {
+  flex: 1 1 10rem;
+  background: var(--text-color);
+  padding: 3rem 1rem 3rem;
+  margin-left: 2rem;
+  margin-right: 20rem;
+  margin-top: 2rem; 
+  margin-bottom: 2rem; /* Adjusted margin */
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid #FF005A;
+  transition: .5s ease;
+}
+
+.skills-container .skills-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.skills-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.skills-box h3 {
+  font-size: 2.6rem;
+  color: var(--second-text-color);
+}
+
+.skills-box p {
+  font-size: 1rem;
+  margin: 1rem 0 3rem; /* Corrected margin */
+  color: var(--second-text-color);
+  background-color: transparent;
+}
+
+img, video {
+    border-radius: 20px; /* adjust the number to make it more or less round */
+}
+
+.skills-container .skills-box {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+}
+
+/* Hover effect for cards */
+.skills-container .skills-box:hover {
+    transform: scale(1.03); /* slight scaling */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* stronger shadow on hover */
+}
+
+/* Subtle shadow for images and videos */
+img, video {
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+}
+
+/* Hover effect for images/videos */
+img:hover, video:hover {
+    transform: scale(1.03); /* slight zoom */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* stronger shadow on hover */
+}
+
+h2 {
+    text-align: center;
+    color: #88DF00; /* keep your current color */
+    font-weight: 800;
+    font-size: 60px;
+    margin-top: 5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
